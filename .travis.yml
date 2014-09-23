@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+  - '0.10'
+before_install:
+  - currentfolder=${PWD##*/}
+  - if [ "$currentfolder" != 'provify' ]; then cd .. && eval "mv $currentfolder provify" && cd provify; fi
+  
