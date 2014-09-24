@@ -4,7 +4,7 @@
   "description": "ignore the src directory on upstream famous code",
   "main": "index.js",
   "scripts": {
-    "test": "npm run-script lint && tape test/*.js",
+    "test": "npm run-script lint && tape test/*.js | tap-spec",
     "lint": "eslint **/*.js"
   },
   "repository": {
@@ -26,9 +26,11 @@
     "eslint": "^0.8.2",
     "npm": "^2.0.0",
     "rimraf": "^2.2.8",
+    "tap-spec": "^1.0.0",
     "tape": "^3.0.0"
   },
   "dependencies": {
-    "browserify-transform-tools": "^1.2.1"
+    "browserify-transform-tools": "^1.2.1",
+    "resolve": "^1.0.0"
   }
 }

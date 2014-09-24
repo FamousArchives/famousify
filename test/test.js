@@ -4,6 +4,7 @@
 'use strict';
 var path = require('path');
 var fs = require('fs');
+var exec = require('child_process').exec;
 var test = require('tape');
 var npm = require('npm');
 var rimraf = require('rimraf');
@@ -41,6 +42,13 @@ function installFamous(repo, t) {
     });
   });
 }
+
+test('clean up npm cache', function (t) {
+  t.plan(1);
+  exec('npm cache clean', function (err) {
+    t.notok(err, 'should exit without an error');
+  });
+});
 
 test('setup famous with no src direcotry', function (t) {
   installFamous('famous@0.2.2', t);
