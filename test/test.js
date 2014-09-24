@@ -15,18 +15,18 @@ var famousify = require('../');
 var famousPath = path.join(__dirname, '../node_modules/famous');
 var dummy = path.resolve(__dirname, '../fixtures/dummy.js');
 
-var testContent = function (t, content, result) {
+var engineRequire = 'require(\'famous/core/Engine\');';
+var contentUnrelated = 'require(\'hacktheplanet\');';
+var expectedOutput = 'require(\'famous/src/core/Engine\');';
+
+function testContent(t, content, result) {
   var expected = result || content;
   transformTools.runTransform(famousify, dummy, {content: content}, function (err, transformed) {
     t.plan(2);
     t.equal(err, null);
     t.equal(transformed, expected);
   });
-};
-
-var engineRequire = 'require(\'famous/core/Engine\');';
-var contentUnrelated = 'require(\'hacktheplanet\');';
-var expectedOutput = 'require(\'famous/src/core/Engine\');';
+}
 
 function installFamous(repo, t) {
   t.plan(4);
