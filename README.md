@@ -3,7 +3,7 @@
 
 ---
 
-[![Build Status](https://travis-ci.org/Famous/famousify.svg?branch=master)](https://travis-ci.org/Famous/famousify) [![Dependency Status](https://david-dm.org/Famous/famousify.svg)](https://david-dm.org/Famous/famousify) [![devDependency Status](https://david-dm.org/Famous/famousify/dev-status.svg)](https://david-dm.org/Famous/famousify#info=devDependencies)
+[![Build Status](https://travis-ci.org/FamousTools/famousify.svg?branch=master)](https://travis-ci.org/FamousTools/famousify) [![Dependency Status](https://david-dm.org/FamousTools/famousify.svg)](https://david-dm.org/FamousTools/famousify) [![devDependency Status](https://david-dm.org/FamousTools/famousify/dev-status.svg)](https://david-dm.org/FamousTools/famousify#info=devDependencies)
 
 Upstream famo.us now has a src directory at the root. This breaks compatibility with node / browserify unless end users include a src directory inside their requires.  This would be gross, and make code unable to move between various environments.  If you add the famousify transform to your browserify transform stack, you will never have to think about that src directory again!
 
