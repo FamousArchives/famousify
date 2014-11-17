@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run-script lint && tape test/*.js | tap-spec",
-    "lint": "eslint **/*.js"
+    "lint": "eslint **/*.js",
+    "prepublish": "npm ls && npm test"
   },
   "repository": {
     "type": "git",
