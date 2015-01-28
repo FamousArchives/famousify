@@ -36,8 +36,8 @@ function installFamous(repo, t) {
     loaded: false
   }, function (err) {
     t.notok(err, 'npm should load without an error');
-    npm.commands.install([repo], function (err) {
-      t.notok(err, 'install should finish without an error');
+    npm.commands.install([repo], function (error) {
+      t.notok(error, 'install should finish without an error');
       t.ok(fs.existsSync(famousPath), 'Famous should exist in the node_modules folder after npm install');
     });
   });
@@ -63,7 +63,7 @@ test('famousify should not work on unrelated requires', function (t) {
 });
 
 test('setup famous with no src direcotry', function (t) {
-  installFamous('TheAlphaNerd/famous#new-structure', t);
+  installFamous('famous', t);
 });
 
 test('famousify should inject a src directory on the head', function (t) {
