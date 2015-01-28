@@ -1,6 +1,6 @@
 {
   "name": "famousify",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "ignore the src directory on upstream famous code",
   "main": "index.js",
   "scripts": {
