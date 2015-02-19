@@ -50,8 +50,8 @@ test('clean up npm cache', function (t) {
   });
 });
 
-test('setup famous with no src direcotry', function (t) {
-  installFamous('famous@0.2.2', t);
+test('setup famous with no src directory', function (t) {
+  installFamous('famous', t);
 });
 
 test('famousify should not work on legacy repos', function (t) {
@@ -62,8 +62,8 @@ test('famousify should not work on unrelated requires', function (t) {
   testContent(t, contentUnrelated);
 });
 
-test('setup famous with no src direcotry', function (t) {
-  installFamous('famous', t);
+test('setup famous with src directory', function (t) {
+  installFamous('famous@0.3.4', t);
 });
 
 test('famousify should inject a src directory on the head', function (t) {
